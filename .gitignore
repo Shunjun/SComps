@@ -1,0 +1,9 @@
+node_modules
+dist
+lib
+es
+
+/.idea
+/.docz
+/.history
+

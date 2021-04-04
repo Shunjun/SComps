@@ -1,0 +1,39 @@
+{
+  "name": "react-scomps",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "unpkg": "dist/antd.min.js",
+  "typings": "lib/index.d.ts",
+  "files": [
+    "dist",
+    "lib",
+    "es"
+  ],
+  "scripts": {
+    "start": "father doc dev",
+    "start:build": "father doc build",
+    "build": "npm run build:start && father build && npm run build:finish",
+    "build:start": "node ./scripts/renameStart.js",
+    "build:finish": "node ./scripts/renameEnd.js && node ./scripts/moveDeclare.js"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "shunjun",
+  "license": "MIT",
+  "peerDependencies": {
+    "antd": ">=4.14.1",
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
+  },
+  "dependencies": {
+    "antd": "^4.14.1"
+  },
+  "devDependencies": {
+    "babel-plugin-import": "^1.13.3",
+    "father": "^2.29.2",
+    "klaw-sync": "^6.0.0"
+  }
+}
